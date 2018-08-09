@@ -18,42 +18,7 @@
         app:slideInterval="3000"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:background="@drawable/search_rect">
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="20dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_search"/>
-            <com.lobothijau.carouselsederhana.customfonts.EditText_Roboto_Regular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="10dp"
-                android:textSize="14dp"
-                android:textColor="#000"
-                android:background="#00000000"
-                />
-            <ImageView
-                android:layout_width="15dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-                android:src="@drawable/ic_close_circle"
-                />
-        </LinearLayout>
-    </LinearLayout>
+
 
     <LinearLayout
         android:background="#fff"
