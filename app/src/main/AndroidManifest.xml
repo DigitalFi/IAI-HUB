@@ -42,10 +42,11 @@
         <activity
             android:name=".Activity_project"
             android:label="Project" />
-        <activity android:name=".Activity_add_project"
-            android:label="Add Project"/>
-
-
+        <activity
+            android:name=".Activity_add_project"
+            android:label="Add Project" />
+        <activity android:name=".Activity_qrcode"
+            android:label="QR Code"/>
     </application>
 
 </manifest>

@@ -13,8 +13,8 @@ public class Activity_profil_arsitek extends AppCompatActivity {
         setContentView(R.layout.activity_profil_arsitek);
     }
 
-    public void Activity_profil_arsitek2(View view) {
-        Intent intent = new Intent(Activity_profil_arsitek.this, Activity_profil_arsitek2.class);
+    public void Activity_qrcode(View view) {
+        Intent intent = new Intent(Activity_profil_arsitek.this, Activity_qrcode.class);
         startActivity(intent);
     }
     }
