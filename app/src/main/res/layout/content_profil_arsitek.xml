@@ -64,7 +64,7 @@
                                 android:layout_alignLeft="@+id/propertyName"
                                 android:layout_alignStart="@+id/propertyName"
                                 android:layout_below="@+id/propertyName"
-                                android:text="14 Street/3rd Block"
+                                android:text="Aktif"
                                 android:textColor="#A2A2A2"
                                 android:textSize="14dp" />
 
@@ -93,16 +93,6 @@
 
                     </android.support.v7.widget.CardView>
 
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Chatting With Arsitek"
-                        android:background="#0d71ce"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:textColor="#fff"/>
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -119,7 +109,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="10dp"
-                            android:text="Legalitas"
+                            android:text="Jenis SKA"
                             android:textColor="#000"
                             android:textSize="14dp" />
                         <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular

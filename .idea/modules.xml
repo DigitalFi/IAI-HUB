@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://C:\Users\Inge\AndroidStudioProjects\iai\CarouselSederhana.iml" filepath="C:\Users\Inge\AndroidStudioProjects\iai\CarouselSederhana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IAI-HUB.iml" filepath="$PROJECT_DIR$/IAI-HUB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iai.iml" filepath="$PROJECT_DIR$/iai.iml" />
     </modules>
   </component>
 </project>

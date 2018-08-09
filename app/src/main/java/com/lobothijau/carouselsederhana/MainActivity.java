@@ -15,7 +15,7 @@ import com.synnapps.carouselview.ImageListener;
 public class MainActivity extends AppCompatActivity {
 
     CarouselView carouselView;
-    int[] sampleImages = {R.drawable.slider1, R.drawable.slider2, R.drawable.slider3, R.drawable.slider4, R.drawable.slider5};
+    int[] sampleImages = {R.drawable.slider11, R.drawable.slider22, R.drawable.slider33, R.drawable.slider44, R.drawable.slider55};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +58,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void Activity_login(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity_login.class);
+        startActivity(intent);
+    }
+
+    public void Activity_supplier(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity_supplier.class);
+        startActivity(intent);
     }
 
     public void Activity_list_arsitek(View view) {
