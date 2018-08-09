@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
         android:id="@+id/ini"
@@ -336,13 +337,15 @@
         </TableLayout>
 
         <android.support.v7.widget.AppCompatButton
+            android:onClick="Activity_add_project"
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="#cc181e"
             android:text="Add Project"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            tools:ignore="OnClick"/>
     </LinearLayout>
 
 

@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Activity_list_arsitek(View view) {
-        Intent intent = new Intent(MainActivity.this, Activity_list_arsitek.class);
+    public void Activity_project(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity_project.class);
         startActivity(intent);
     }
 }
