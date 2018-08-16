@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#eee"
     tools:context="com.lobothijau.carouselsederhana.Activity_profil_arsitek">
 
     <android.support.design.widget.AppBarLayout
@@ -15,8 +16,5 @@
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_profil_arsitek" />
-
-
-
 
 </android.support.design.widget.CoordinatorLayout>

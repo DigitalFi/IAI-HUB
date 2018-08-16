@@ -7,10 +7,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="56dp"
-        android:paddingLeft="24dp"
-        android:paddingRight="24dp">
+        android:layout_height="match_parent"
+        android:padding="20dp">
 
         <ImageView android:src="@drawable/iaihub"
             android:layout_width="300dp"
@@ -65,4 +63,5 @@
             android:textSize="16dip"/>
 
     </LinearLayout>
+
 </ScrollView>
