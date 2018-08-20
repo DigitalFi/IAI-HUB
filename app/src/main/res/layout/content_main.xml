@@ -8,108 +8,118 @@
     tools:context="com.lobothijau.carouselsederhana.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/carouselView"
+    <LinearLayout
+        android:id="@+id/carouselViewL"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        app:fillColor="#FFFFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:pageColor="#00000000"
-        app:radius="6dp"
-        app:slideInterval="3000"
-        app:strokeColor="#FF777777"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/MainMenu">
+        <com.synnapps.carouselview.CarouselView
+            android:id="@+id/carouselView"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            app:fillColor="#FFFFFFFF"
+            app:pageColor="#00000000"
+            app:radius="6dp"
+            app:slideInterval="3000"
+            app:strokeColor="#FF777777"
+            app:strokeWidth="1dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints,NotSibling" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/MainMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
         android:background="@color/colorPrimary"
+        android:paddingBottom="15dp"
+        android:paddingHorizontal="15dp"
         android:orientation="horizontal"
-        android:padding="10dp"
         android:fadingEdgeLength="@dimen/cardview_default_elevation"
-        app:layout_constraintTop_toBottomOf="@+id/carouselView"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:orientation="horizontal"
-            android:paddingBottom="10dp"
-            android:paddingTop="15dp">
+            app:cardCornerRadius="5dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:onClick="Activity_login"
                 android:orientation="vertical"
+                android:padding="10dp"
                 tools:ignore="OnClick">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="17dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/arsitek1" />
 
                 <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="32dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center"
                     android:text="Arsitek" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="Activity_supplier"
                 android:orientation="vertical"
+                android:padding="10dp"
                 tools:ignore="OnClick">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/supplier1" />
 
                 <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center"
                     android:text="Supplier" />
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="Activity_project"
                 android:orientation="vertical"
+                android:padding="10dp"
                 tools:ignore="OnClick">
 
                 <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="60dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:src="@drawable/project" />
 
                 <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginLeft="1dp"
-                    android:layout_marginTop="3dp"
-                    android:text="Project" />
+                    android:layout_gravity="center"
+                    android:text="Public" />
+
             </LinearLayout>
         </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
     </LinearLayout>
 
     <LinearLayout
@@ -117,16 +127,123 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
+        android:background="@color/colorPrimary"
         android:layout_weight="1"
         android:orientation="vertical"
-        android:weightSum="1"
-        app:layout_constraintTop_toBottomOf="@+id/MainMenu">
+        app:layout_constraintTop_toBottomOf="@+id/carouselViewL"
+        android:weightSum="1">
 
         <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Gallery" />
+
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="1dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider22" />
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider33" />
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider44" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="See More >"
+            android:textColor="#2ebcff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bawah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorPrimary"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ini"
+        android:weightSum="1">
+
+        <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
             android:text="Gallery" />
 
         <!--atas-->
