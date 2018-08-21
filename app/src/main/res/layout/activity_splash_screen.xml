@@ -9,12 +9,11 @@
 
     <ImageView
         android:id="@+id/splash"
-        android:layout_width="393dp"
-        android:layout_height="599dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:paddingBottom="2dp"
         android:src="@drawable/splashfix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.503"

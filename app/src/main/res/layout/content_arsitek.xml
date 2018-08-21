@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:padding="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,16 +48,14 @@
 
 
     <LinearLayout
-        android:background="#d4d5d6"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="384dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
@@ -67,30 +65,22 @@
                 android:onClick="Activity_profil_arsitek"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginLeft="5dp">
 
                 <RelativeLayout
                     android:id="@+id/menu1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="30dp">
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/foodImage"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/arsitek4" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                         android:id="@+id/propertyName"
@@ -152,13 +142,13 @@
                 <RelativeLayout
                     android:id="@+id/menu5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="30dp">
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/foodImage2"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/arsitek3" />
 
                     <LinearLayout
@@ -231,13 +221,13 @@
                 <RelativeLayout
                     android:id="@+id/menu3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="30dp">
+                    android:layout_height="wrap_content">
 
                     <ImageView
                         android:id="@+id/foodImage3"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/ahmad" />
 
                     <LinearLayout
