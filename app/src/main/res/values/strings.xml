@@ -6,4 +6,8 @@ marketing. The marketing may be in the form of a regular
 news item or half column society news in the Sunday
 newspaper. The marketing may be in the form of a heart to
 heart talk with Mr. Brown on his prominent local television</string>
+    <string name="open">1</string>
+    <string name="close">2</string>
+    <string name="navigation_drawer_open">2</string>
+    <string name="navigation_drawer_close">3</string>
 </resources>
