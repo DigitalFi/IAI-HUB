@@ -46,10 +46,10 @@ public class NavigationDrawer extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+   @Override
+   public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+    getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -74,13 +74,12 @@ public class NavigationDrawer extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.project) {
+        if (id == R.id.arsitek) {
             // Handle the camera action
+        } else if (id == R.id.public2) {
+
         } else if (id == R.id.supplier) {
 
-        } else if (id == R.id.list_acara) {
-
-        } else if (id == R.id.asosiasi_informasi) {
 
         }
 
