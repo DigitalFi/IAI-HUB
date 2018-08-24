@@ -37,11 +37,7 @@
                     android:textColor="#000"
                     android:background="#00000000"
                     />
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="20dp"
-                    android:layout_marginRight="10dp"
-                    android:src="@drawable/ic_close_circle"/>
+
 
             </LinearLayout>
         </LinearLayout>

@@ -6,13 +6,13 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/arsitek"
-            android:title="Arsitek" />
+            android:title="Arsitek Ahmad Djaelani" />
         <item
             android:id="@+id/public2"
-            android:title="Public" />
+            android:title="Nilai KUM 1234567" />
         <item
             android:id="@+id/supplier"
-            android:title="Supplier" />
+            android:title="Status Aktif" />
     </group>
 
 </menu>

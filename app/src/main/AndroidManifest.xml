@@ -48,8 +48,17 @@
         <activity
             android:name=".Activity_qrcode"
             android:label="QR Code" />
-        <activity android:name=".NavigationDrawer"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".NavigationDrawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity_list_acara" />
+        <activity android:name=".Activity_asosiasi_informasi" />
+        <activity android:name=".Activity_page_arsitek" />
+        <activity android:name=".Activity_page_supplier" />
+        <activity android:name=".Activity_page_public" />
+        <activity android:name=".Activity_add_supplier" />
+        <activity android:name=".Activity_login2" />
+        <activity android:name=".Activity_login3" />
     </application>
 
 </manifest>

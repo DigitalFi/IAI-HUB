@@ -64,14 +64,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Activity_login.class);
         startActivity(intent);
     }
-
-    public void Activity_supplier(View view) {
-        Intent intent = new Intent(MainActivity.this, Activity_supplier.class);
+    public void Activity_login2(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity_login2.class);
         startActivity(intent);
     }
 
-    public void Activity_project(View view) {
-        Intent intent = new Intent(MainActivity.this, Activity_project.class);
+    public void Activity_login3(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity_login3.class);
         startActivity(intent);
     }
 }
