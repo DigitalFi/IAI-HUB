@@ -23,8 +23,7 @@ public class Activity_page_supplier extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void Activity_asosiasi_informasi(View view) {
-        Intent intent = new Intent(Activity_page_supplier.this, Activity_asosiasi_informasi.class);
-        startActivity(intent);
+    public void Activity_supplier(View view) {
+
     }
 }

@@ -5,22 +5,14 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/ic_apps_iai_bg"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_apps_iai_bg_round"
+        android:roundIcon="@mipmap/ic_apps_iai_bg"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Activity_list_arsitek"
             android:label="List Arsitek" />
-        <activity
-            android:name=".Activity_profil_arsitek"
-            android:label="Profile Arsitek" />
         <activity
             android:name=".Activity_profil_arsitek2"
             android:label="Porftolio Arsitek" />
@@ -49,16 +41,145 @@
             android:name=".Activity_qrcode"
             android:label="QR Code" />
         <activity
-            android:name=".NavigationDrawer"
+            android:name=".Activity_list_acara"
+            android:label="History Acara" />
+        <activity
+            android:name=".Activity_page_arsitek"
+            android:label="Arsitek" />
+        <activity
+            android:name=".Activity_page_supplier"
+            android:label="Suplier" />
+        <activity
+            android:name=".Activity_page_public"
+            android:label="Public" />
+        <activity
+            android:name=".Activity_add_supplier"
+            android:label="Tambah Barang" />
+        <activity
+            android:name=".Activity_login2"
+            android:label="Login" />
+        <activity
+            android:name=".Activity_login3"
+            android:label="Login" />
+        <activity
+            android:name=".Main_menu"
+            android:label="IAI|Hub"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity_list_acara" />
-        <activity android:name=".Activity_asosiasi_informasi" />
-        <activity android:name=".Activity_page_arsitek" />
-        <activity android:name=".Activity_page_supplier" />
-        <activity android:name=".Activity_page_public" />
-        <activity android:name=".Activity_add_supplier" />
-        <activity android:name=".Activity_login2" />
-        <activity android:name=".Activity_login3" />
+        <activity
+            android:name=".Main_page_arsitek"
+            android:label="Arsitek"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main_page_public"
+            android:label="Profesional"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Main_page_suplier"
+            android:label="Suplier"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Profile_arsitek"
+            android:label="Profile"
+            android:parentActivityName=".Main_page_arsitek"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_arsitek" />
+        </activity>
+        <activity
+            android:name=".Form_edit_arsitek"
+            android:label="Edit"
+            android:parentActivityName=".Profile_arsitek"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Profile_arsitek" />
+        </activity>
+        <activity
+            android:name=".Detil_news"
+            android:label="News"
+            android:parentActivityName=".Main_page_arsitek"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_arsitek" />
+        </activity>
+        <activity
+            android:name=".New_project"
+            android:label="New Portofolio"
+            android:parentActivityName=".Main_page_arsitek"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_arsitek" />
+        </activity>
+        <activity
+            android:name=".Profile_public"
+            android:label="Profile"
+            android:parentActivityName=".Main_page_public"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_public" />
+        </activity>
+        <activity
+            android:name=".Form_edit_public"
+            android:label="Edit"
+            android:parentActivityName=".Profile_public"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Profile_public" />
+        </activity>
+        <activity
+            android:name=".New_project_public"
+            android:label="New Project"
+            android:parentActivityName=".Main_page_public"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_public" />
+        </activity>
+        <activity
+            android:name=".Detil_news_public"
+            android:label="News"
+            android:parentActivityName=".Main_page_public"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_public" />
+        </activity>
+        <activity
+            android:name=".Profile_suplier"
+            android:label="Profile"
+            android:parentActivityName=".Main_page_suplier"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_suplier" />
+        </activity>
+        <activity
+            android:name=".Form_edit_suplier"
+            android:label="Edit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".New_project_suplier"
+            android:label="New Product"
+            android:parentActivityName=".Main_page_suplier"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_suplier" />
+        </activity>
+        <activity
+            android:name=".Detil_news_suplier"
+            android:label="News"
+            android:parentActivityName=".Main_page_suplier"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lobothijau.carouselsederhana.Main_page_suplier" />
+        </activity>
     </application>
 
 </manifest>

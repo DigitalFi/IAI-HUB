@@ -9,38 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:background="@drawable/search_rect">
-                <ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_search"/>
-                <com.lobothijau.carouselsederhana.customfonts.EditText_Roboto_Regular
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="14dp"
-                    android:textColor="#000"
-                    android:background="#00000000"
-                    />
-
-
-            </LinearLayout>
-        </LinearLayout>
 
 
     <LinearLayout
@@ -58,7 +26,6 @@
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
-                android:onClick="Activity_profil_arsitek"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -72,8 +39,8 @@
 
                     <ImageView
                         android:id="@+id/foodImage"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/arsitek4" />
 
@@ -88,42 +55,22 @@
                         android:layout_toEndOf="@+id/foodImage"
                         android:layout_toRightOf="@+id/foodImage"
                         android:layout_weight="1"
-                        android:text="Ahmad Djaelani"
+                        android:text="Usama Ula"
                         android:textColor="#000"
                         android:textSize="20dp" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/street1"
+                        android:id="@+id/street3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/propertyName"
                         android:layout_alignStart="@+id/propertyName"
                         android:layout_below="@+id/propertyName"
-                        android:text="14 Street/3rd Block"
+                        android:text="Intresting"
                         android:textColor="#A2A2A2"
                         android:textSize="14dp" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/street2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street1"
-                        android:layout_alignStart="@+id/street1"
-                        android:layout_below="@+id/street1"
-                        android:text="Super Build-up Area:1060 Sq.Ft"
-                        android:textColor="#A2A2A2"
-                        android:textSize="12dp" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/amount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street2"
-                        android:layout_alignStart="@+id/street2"
-                        android:layout_below="@+id/street2"
-                        android:text="0895345748278"
-                        android:textColor="#000"
-                        android:textSize="14dp" />
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
@@ -142,10 +89,10 @@
 
                     <ImageView
                         android:id="@+id/foodImage2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/arsitek3" />
+                        android:src="@drawable/arsitek2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -167,42 +114,82 @@
                         android:layout_toEndOf="@+id/foodImage2"
                         android:layout_toRightOf="@+id/foodImage2"
                         android:layout_weight="1"
-                        android:text="Hamish Daud"
+                        android:text="Harimukit"
                         android:textColor="#000"
                         android:textSize="20dp" />
-
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/street3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/propertyName2"
-                        android:layout_alignStart="@+id/propertyName2"
-                        android:layout_below="@+id/propertyName2"
-                        android:text="14 Street/3rd Block"
-                        android:textColor="#A2A2A2"
-                        android:textSize="14dp" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                         android:id="@+id/street4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street3"
-                        android:layout_alignStart="@+id/street3"
-                        android:layout_below="@+id/street3"
-                        android:text="Super Build-up Area:1060 Sq.Ft"
+                        android:layout_alignLeft="@+id/propertyName2"
+                        android:layout_alignStart="@+id/propertyName2"
+                        android:layout_below="@+id/propertyName2"
+                        android:text="Intresting"
                         android:textColor="#A2A2A2"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/foodImage5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/arsitek3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:id="@+id/linearLayout2"
+                        tools:ignore="Orientation" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/amount2"
+                        android:id="@+id/propertyName4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street4"
-                        android:layout_alignStart="@+id/street4"
-                        android:layout_below="@+id/street4"
-                        android:text="0895326382"
+                        android:layout_alignTop="@+id/linearLayout2"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginStart="28dp"
+                        android:layout_toEndOf="@+id/foodImage5"
+                        android:layout_toRightOf="@+id/foodImage5"
+                        android:layout_weight="1"
+                        android:text="Gagi Baru"
                         android:textColor="#000"
+                        android:textSize="20dp" />
+
+                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                        android:id="@+id/street5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/propertyName4"
+                        android:layout_alignStart="@+id/propertyName4"
+                        android:layout_below="@+id/propertyName4"
+                        android:text="intresting"
+                        android:textColor="#A2A2A2"
                         android:textSize="14dp" />
+
+
+
+
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -221,10 +208,10 @@
 
                     <ImageView
                         android:id="@+id/foodImage3"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ahmad" />
+                        android:src="@drawable/arsitek2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -237,7 +224,7 @@
                         android:layout_marginTop="6dp" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/propertyName4"
+                        android:id="@+id/propertyName6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentTop="true"
@@ -246,48 +233,28 @@
                         android:layout_toEndOf="@+id/foodImage3"
                         android:layout_toRightOf="@+id/foodImage3"
                         android:layout_weight="1"
-                        android:text="Gilang"
+                        android:text="Halimun"
                         android:textColor="#000"
                         android:textSize="20dp" />
-
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/street5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/propertyName4"
-                        android:layout_alignStart="@+id/propertyName4"
-                        android:layout_below="@+id/propertyName4"
-                        android:text="14 Street/3rd Block"
-                        android:textColor="#A2A2A2"
-                        android:textSize="14dp" />
 
                     <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
                         android:id="@+id/street6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street5"
-                        android:layout_alignStart="@+id/street5"
-                        android:layout_below="@+id/street5"
-                        android:text="Super Build-up Area:1060 Sq.Ft"
+                        android:layout_alignLeft="@+id/propertyName6"
+                        android:layout_alignStart="@+id/propertyName6"
+                        android:layout_below="@+id/propertyName6"
+                        android:text="Intresting"
                         android:textColor="#A2A2A2"
-                        android:textSize="12dp"
-                        tools:ignore="UnknownId" />
-
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
-                        android:id="@+id/amount6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/street6"
-                        android:layout_alignStart="@+id/street6"
-                        android:layout_below="@+id/street6"
-                        android:text="0895123982379"
-                        android:textColor="#000"
                         android:textSize="14dp" />
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
+
+
         </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>
 </LinearLayout>

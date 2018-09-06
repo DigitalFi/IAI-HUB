@@ -54,7 +54,7 @@
             android:background="#cc181e"
             android:padding="12dp"
             android:text="Add Foto"
-            android:textColor="#fff" />
+            android:textColor="#fff"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/add_supplier"
@@ -64,8 +64,9 @@
             android:layout_marginTop="24dp"
             android:background="#cc181e"
             android:padding="12dp"
-            android:text="Add Supplier"
-            android:textColor="#fff" />
+            android:text="Add Barang"
+            android:textColor="#fff"
+            android:onClick="addBarang"/>
 
 
     </LinearLayout>

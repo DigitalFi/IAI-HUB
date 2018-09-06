@@ -19,4 +19,5 @@ public class Activity_add_project extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 }

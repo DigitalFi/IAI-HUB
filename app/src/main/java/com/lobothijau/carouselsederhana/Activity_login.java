@@ -13,13 +13,8 @@ public class Activity_login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void Activity_list_arsitek(View view) {
-        Intent intent = new Intent(Activity_login.this, Activity_list_arsitek.class);
-        startActivity(intent);
-    }
-
     public void Activity_page_arsitek(View view) {
-        Intent intent = new Intent(Activity_login.this, Activity_page_arsitek.class);
+        Intent intent = new Intent(Activity_login.this, Main_page_arsitek.class);
         startActivity(intent);
     }
 }

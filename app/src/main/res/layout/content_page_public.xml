@@ -8,23 +8,13 @@
     tools:context="com.lobothijau.carouselsederhana.Activity_page_public">
 
     <LinearLayout
-        android:id="@+id/carouselViewL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/MainMenu"
-        tools:ignore="Orientation">
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/MainMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:orientation="horizontal"
         android:paddingBottom="15dp"
         android:paddingHorizontal="15dp"
-        android:orientation="horizontal"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp">
 
@@ -44,19 +34,21 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
                     android:onClick="Activity_list_arsitek"
                     android:orientation="vertical"
                     android:padding="10dp"
                     tools:ignore="OnClick">
 
                     <ImageView
-                        android:layout_width="85dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/arsitek1" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -73,11 +65,12 @@
                     tools:ignore="OnClick">
 
                     <ImageView
-                        android:layout_width="85dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/supplier1" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -88,21 +81,23 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Activity_asosiasi_informasi"
+                    android:gravity="center"
+                    android:onClick="Activity_add_project"
                     android:orientation="vertical"
                     android:padding="10dp"
                     tools:ignore="OnClick">
 
                     <ImageView
-                        android:layout_width="85dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/info" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Asosiasi. Info" />
+                        android:text="tambah" />
 
                 </LinearLayout>
 
@@ -113,261 +108,403 @@
 
     </LinearLayout>
 
-
     <LinearLayout
-        android:id="@+id/ini"
+        android:id="@+id/informasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/MainMenu">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arialmtbold"
+            android:text="Informasi Asosiasi" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="315dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/informasi">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="6dip"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/cluster3" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="26dip"
+                            android:layout_alignLeft="@+id/firstLine"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignStart="@+id/firstLine"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="29 Agustus 2018"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:layout_toEndOf="@+id/icon"
+                            android:layout_toRightOf="@+id/icon"
+                            android:fontFamily="@font/arialmtbold"
+                            android:gravity="center_vertical"
+                            android:text="Event Acara IAI Region Jakarta"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="6dip"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/cluster3" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="26dip"
+                            android:layout_alignLeft="@+id/firstLine"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignStart="@+id/firstLine"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="29 Agustus 2018"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:layout_toEndOf="@+id/icon"
+                            android:layout_toRightOf="@+id/icon"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/arialmtbold"
+                            android:text="Memberikan Pelayanan Pada Custumer"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="6dip"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/cluster3" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="26dip"
+                            android:layout_alignLeft="@+id/firstLine"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignStart="@+id/firstLine"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="29 Agustus 2018"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:layout_toEndOf="@+id/icon"
+                            android:layout_toRightOf="@+id/icon"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/arialmtbold"
+                            android:text="Cara Mendaftar Acara"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="6dip"
+                            android:contentDescription="TODO"
+                            android:src="@drawable/cluster3" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="26dip"
+                            android:layout_alignLeft="@+id/firstLine"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignStart="@+id/firstLine"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="29 Agustus 2018"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignWithParentIfMissing="true"
+                            android:layout_toEndOf="@+id/icon"
+                            android:layout_toRightOf="@+id/icon"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/arialmtbold"
+                            android:text="Agung Podomoro Cluster"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--Pembangunan Picture-->
+    <LinearLayout
+        android:id="@+id/Design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
         android:weightSum="1"
-        app:layout_constraintTop_toBottomOf="@+id/carouselViewL">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
-        <TableLayout
-            android:id="@+id/tablelayoutid"
-            android:layout_width="match_parent"
+        <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Design"
+            android:textColor="#fff"
+            android:textStyle="bold" />
 
-            <TableRow
-                android:id="@+id/rowlay"
-                android:background="#cc181e"
-                android:padding="10dp">
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="5">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="No"
-                    android:textColor="#fff" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Project"
-                    android:textColor="#fff" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Status"
-                    android:textColor="#fff" />
-            </TableRow>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider22" />
+                </android.support.v7.widget.CardView>
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider33" />
+                </android.support.v7.widget.CardView>
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                    android:text="2" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cluster" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider44" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider33" />
+                </android.support.v7.widget.CardView>
 
-                    android:text="3" />
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Hotel" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider44" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="4" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan" />
+        <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="See More >"
+            android:textColor="#2ebcff" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress " />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="5" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Hotel Bandung" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="7" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan Jakarta" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="8" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cluster Depok" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="9" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Renovasi Rumah Sakit" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="10" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
-        </TableLayout>
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_login"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#cc181e"
-        android:onClick="Activity_add_project"
-        android:text="Add Project"
-        android:textColor="#fff"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="436dp" />
 </android.support.constraint.ConstraintLayout>

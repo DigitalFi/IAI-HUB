@@ -7,7 +7,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="20dp">
 
         <ImageView android:src="@drawable/iaihub"
@@ -53,15 +53,6 @@
             android:textColor="#fff"
             android:padding="12dp"
             android:text="Login"/>
-
-        <TextView android:id="@+id/link_signup"
-            android:onClick="Activity_list_arsitek"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Skip Add"
-            android:gravity="center"
-            android:textSize="16dip"/>
 
     </LinearLayout>
 

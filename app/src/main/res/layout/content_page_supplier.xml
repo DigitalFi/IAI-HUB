@@ -8,16 +8,6 @@
     tools:context="com.lobothijau.carouselsederhana.Activity_page_supplier">
 
     <LinearLayout
-        android:id="@+id/carouselViewL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/MainMenu"
-        tools:ignore="Orientation">
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/MainMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,44 +36,66 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="Activity_asosiasi_informasi"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    tools:ignore="OnClick">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/publik1" />
+
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Public" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:onClick="Activity_list_arsitek"
                     android:orientation="vertical"
                     android:padding="10dp"
                     tools:ignore="OnClick">
 
                     <ImageView
-                        android:layout_width="150dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/arsitek1" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Arsitek" />
-
                 </LinearLayout>
-
-
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="Activity_asosiasi_informasi"
+                    android:onClick="Activity_add_supplier"
                     android:orientation="vertical"
                     android:padding="10dp"
                     tools:ignore="OnClick">
 
                     <ImageView
-                        android:layout_width="150dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/info" />
 
-                    <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+                    <TextView
+                        android:fontFamily="@font/arialmtbold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Asosiasi. Info" />
+                        android:text="Tambah" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -91,264 +103,417 @@
 
     </LinearLayout>
 
-
     <LinearLayout
-        android:id="@+id/ini"
         android:layout_width="match_parent"
-        android:layout_height="315dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/Design"
+        app:layout_constraintTop_toBottomOf="@id/MainMenu"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ini"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TableLayout
+                    android:id="@+id/tablelayoutid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TableRow
+                        android:id="@+id/rowlay"
+                        android:background="#cc181e"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="No"
+                            android:fontFamily="@font/arialmtbold"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Project"
+                            android:fontFamily="@font/arialmtbold"
+                            android:textColor="#fff" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/arialmtbold"
+                            android:text="Stock"
+                            android:textColor="#fff" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Peralon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Semen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+
+                            android:text="3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Bata" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="4" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pasir" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock " />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Marmer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="7" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Genteng" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="8" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Paku" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Kusen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#ECEFF1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:text="10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pintu" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="In Stock" />
+                    </TableRow>
+                </TableLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!--Pembangunan Picture-->
+    <LinearLayout
+        android:id="@+id/Design"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
         android:weightSum="1"
-        app:layout_constraintTop_toBottomOf="@+id/carouselViewL">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
-        <TableLayout
-            android:id="@+id/tablelayoutid"
-            android:layout_width="match_parent"
+        <TextView
+            android:fontFamily="@font/arialmtbold"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="Design"
+            android:textColor="#fff"
+            android:textStyle="bold" />
 
-            <TableRow
-                android:id="@+id/rowlay"
-                android:background="#cc181e"
-                android:padding="10dp">
+        <!--atas-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:weightSum="5">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="No"
-                    android:textColor="#fff" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Project"
-                    android:textColor="#fff" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Status"
-                    android:textColor="#fff" />
-            </TableRow>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider22" />
+                </android.support.v7.widget.CardView>
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider33" />
+                </android.support.v7.widget.CardView>
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                    android:text="2" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cluster" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider44" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider33" />
+                </android.support.v7.widget.CardView>
 
-                    android:text="3" />
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Hotel" />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="2dp">
 
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/slider44" />
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="4" />
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress " />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="5" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Hotel Bandung" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="7" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan Jakarta" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="8" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Cluster Depok" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="On Progress" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="9" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Renovasi Rumah Sakit" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
-
-            <TableRow
-                android:background="#ECEFF1"
-                android:padding="5dp">
-
-                <TextView
-                    android:layout_width="40dp"
-                    android:layout_height="wrap_content"
-                    android:text="10" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Perumahan " />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Done" />
-            </TableRow>
-        </TableLayout>
-
+        <com.lobothijau.carouselsederhana.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="See More >"
+            android:textColor="#2ebcff" />
 
     </LinearLayout>
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_login"
-        android:layout_width="fill_parent"
-        android:layout_height="43dp"
-        android:background="#cc181e"
-        android:onClick="Activity_add_supplier"
-        android:text="Add Supplier"
-        android:textColor="#fff"
-        tools:ignore="MissingConstraints,OnClick"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="443dp" />
 
 </android.support.constraint.ConstraintLayout>

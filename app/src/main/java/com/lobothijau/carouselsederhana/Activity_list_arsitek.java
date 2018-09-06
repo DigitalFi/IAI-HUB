@@ -14,9 +14,8 @@ public class Activity_list_arsitek extends AppCompatActivity {
     }
 
 
-
     public void Activity_profil_arsitek(View view) {
-        Intent intent = new Intent(Activity_list_arsitek.this, Activity_profil_arsitek.class);
+        Intent intent = new Intent(Activity_list_arsitek.this, Profile_arsitek.class);
         startActivity(intent);
     }
 }

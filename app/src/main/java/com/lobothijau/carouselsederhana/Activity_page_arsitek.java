@@ -17,7 +17,7 @@ public class Activity_page_arsitek extends AppCompatActivity {
         startActivity(intent);
     }
     public void Activity_asosiasi_informasi(View view) {
-        Intent intent = new Intent(Activity_page_arsitek.this, Activity_asosiasi_informasi.class);
+        Intent intent = new Intent(Activity_page_arsitek.this, Activity_list_arsitek.class);
         startActivity(intent);
     }
 

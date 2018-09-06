@@ -19,7 +19,7 @@ public class Activity_login2 extends AppCompatActivity {
     }
 
     public void Activity_page_supplier(View view) {
-        Intent intent = new Intent(Activity_login2.this, Activity_page_supplier.class);
+        Intent intent = new Intent(Activity_login2.this, Main_page_suplier.class);
         startActivity(intent);
     }
 }

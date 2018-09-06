@@ -14,7 +14,7 @@ public class Activity_login3 extends AppCompatActivity {
     }
 
     public void Activity_page_public(View view) {
-        Intent intent = new Intent(Activity_login3.this, Activity_page_public.class);
+        Intent intent = new Intent(Activity_login3.this, Main_page_public.class);
         startActivity(intent);
     }
 
